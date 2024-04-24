@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link rel="stylesheet" href="../css_img/css/artist.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../css_img/image/favicon.ico">
+    <title>Groupie-Tracker</title>
+</head>
+<body>
+    <div class="container">
+        
+            <a href="/">
+                <div class="backHome">&#8592; Back To Home</div>
+            </a>
+            
+        
+        <div class="title">{{.Artist.Name}}</div>
+        <div class="box">
+            <div class="info">
+                
+                <h3>Members</h3>
+                {{range .Artist.Members}}
+                   <p>{{.}}</p>
+                {{end}}
+                <br>
+                <h3>Date of Creation:</h3>
+                <p>{{.Artist.CreationDate}}</p>
+                <br>
+                <h3>First Album:</h3>
+                <p>{{.Artist.FirstAlbum}}</p>
+                <br>
+            </div>
+            <div class="im"><img src="{{.Artist.Image}}" alt=""></div>
+           
+        </div>
+        <div class="info concert" >
+            <h3>Concert Dates</h3>
+            {{range $i, $v := .Relation.DatesLocation}}
+            <div class="cities"><p>{{$i}}</p> <p class="dates">{{range $v}} |{{.}}| {{end}}</p></div>
+            {{end}}
+        
+            
+        </div>
+    </div>
+</body>
+</html>

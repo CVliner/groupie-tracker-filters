@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link rel="stylesheet" href="../css_img/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../css_img/image/favicon.ico">
+    <title>Groupie-Tracker</title>
+</head>
+<body>
+    <div class="title"><h1>Groupie-Tracker</h1></div> 
+    <div class="container">
+        <a href="/">
+            <div class="backHome">&#8592; Back To Home</div>
+        </a>
+        {{if .Everyone}}
+        <div class="wrapper wrap">
+        {{range .Everyone}}
+           <div class="card">
+            <a href="/artists/?id={{.ID}}">
+                <div class="front">
+                    <img src="{{.Image}}" alt="">
+                </div>
+                <div class="back">
+                    <div class="text">{{.Name}}</div>
+                </div>
+            </a>
+            </div>
+        {{end}}
+        </div>
+        {{else}}
+        <h3 class="nothingFound">Nothing Found</h3>
+        {{end}}
+    </div>
+ 
+
+    
+</body>
+</html>

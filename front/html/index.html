@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link rel="stylesheet" href="../css_img/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../css_img/image/favicon.ico">
+    <title>Groupie-Tracker</title>
+</head>
+<body>
+    <div class="title"><h1>Groupie-Tracker</h1></div>
+    <div class="containerNew">
+    <form action="/filter">
+        <div class="filter">
+            <div>
+                <div class="checkBoxes">
+                    <legend>№ Members in the Band</legend>
+                    <input type="checkbox" id="1" name="interest" value="1" />
+                    <label for="1">1</label>
+                    <input type="checkbox" id="2" name="interest" value="2" />
+                    <label for="2">2</label>
+                    <input type="checkbox" id="3" name="interest" value="3" />
+                    <label for="3">3</label>
+                    <input type="checkbox" id="4" name="interest" value="4" />
+                    <label for="4">4</label>
+                    <input type="checkbox" id="5" name="interest" value="5" />
+                    <label for="5">5</label>
+                    <input type="checkbox" id="6" name="interest" value="6" />
+                    <label for="6">6</label>
+                    <input type="checkbox" id="7" name="interest" value="7" />
+                    <label for="7">7</label>
+                </div>
+
+                <div class="loccc">
+                    <legend>Choose or write location</legend>
+                    <input list="locations" id="Locations" name="Locations" placeholder="Search..."/>
+                    <datalist id="locations">
+                    {{range .Location.Ind}}
+                        {{range .Locations}}
+                            <option value="{{.}}"></option>
+                        {{end}}
+                    {{end}}
+                    </datalist>
+                </div>
+            </div>   
+    <!-- second -->
+            <div class="wrrr">
+                <div class="values">
+                    <p>Filter by first Album date</p>
+                    <span id="range3">
+                        1958
+                    </span>
+                    <span> &dash; </span>
+                    <span id="range4">
+                        2020
+                    </span>
+                </div>
+                <div class="cont">
+                    <div class="slider-track2"></div>
+                        <input name="range3" type="range" min="1958" max="2020" value="1958" id="slider-3" oninput="slideThree()">
+                        <input name="range4" type="range" min="1958" max="2020" value="2020" id="slider-4" oninput="slideFour()">
+                    </div>
+        <!-- Original in the bottom -->
+                    <div class="values">
+                        <p>Filter by Creation date</p>
+                        <span id="range1">
+                            1958
+                        </span>
+                        <span> &dash; </span>
+                        <span id="range2">
+                            2015
+                        </span>
+                    </div>
+                    <div class="cont">
+                        <div class="slider-track"></div>
+                        <input name="range1" type="range" min="1958" max="2015" value="1958" id="slider-1" oninput="slideOne()">
+                        <input name="range2" type="range" min="1958" max="2015" value="2015" id="slider-2" oninput="slideTwo()">
+                    </div>
+                </div>
+            </div> 
+            <div class="bottonNew">
+                <button type="submit">Search</button>
+            </div>
+            </div>
+        
+            
+    </form>
+</div>
+    <div class="container">
+        <div class="wrapper wrap">
+        {{range .Everyone}}
+           <div class="card">
+            <a href="/artists/?id={{.ID}}">
+                <div class="front">
+                    <img src="{{.Image}}" alt="">
+                </div>
+                <div class="back">
+                    <div class="text">{{.Name}}</div>
+                </div>
+            </a>
+            </div>
+        {{end}}
+        </div>
+    </div>
+    <script src="../css_img/js-filter-track/filter.js"></script>
+</body>
+</html>
