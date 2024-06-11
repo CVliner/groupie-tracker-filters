@@ -21,7 +21,7 @@ This project will help you learn about:
     JSON files and format
     Go routines
 
-### HINTS
+### Hints
 
 You have to pay attention to the locations. For example Seattle, Washington, USA is part of Washington, USA.
 
@@ -36,7 +36,7 @@ You have to pay attention to the locations. For example Seattle, Washington, USA
 
 Only the standard Go packages are allowed.
 
-### Run Locally
+### Run locally
 - Clone the project
 - Go to the project directory
 - Start the server
