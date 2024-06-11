@@ -36,7 +36,7 @@ You have to pay attention to the locations. For example Seattle, Washington, USA
 
 Only the standard Go packages are allowed.
 
-## Run Locally
+### Run Locally
 - Clone the project
 - Go to the project directory
 - Start the server
