@@ -152,11 +152,8 @@ func CreationDate(data Everything, range1 string, range2 string) (Everything, er
 			artists = append(artists, result)
 		}
 	}
-
-	// fmt.Println(artists)
 	output.Everyone = artists
 	return output, nil
-	//}
 }
 
 func FirstAlbumDates(data Everything, range1 string, range2 string) (Everything, error) {
@@ -183,11 +180,8 @@ func FirstAlbumDates(data Everything, range1 string, range2 string) (Everything,
 			artists = append(artists, result)
 		}
 	}
-
-	// fmt.Println(artists)
 	output.Everyone = artists
 	return output, nil
-	//}
 }
 
 func MembersNumber(data Everything, arr []string) (Everything, error) {
@@ -209,11 +203,8 @@ func MembersNumber(data Everything, arr []string) (Everything, error) {
 			}
 		}
 	}
-
-	// fmt.Println(artists)
 	output.Everyone = artists
 	return output, nil
-	//}
 }
 
 func LocationSearch(data Everything, search string) (Everything, error) {
@@ -239,6 +230,5 @@ func LocationSearch(data Everything, search string) (Everything, error) {
 	}
 	output.Everyone = artists
 	return output, nil
-	//}
 }
 
