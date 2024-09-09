@@ -26,16 +26,6 @@ This project will help you learn about:
 You have to pay attention to the locations. For example Seattle, Washington, USA is part of Washington, USA.
 
 
-### Instructions and allowed packages
-
-    The backend must be written in Go.
-    You must handle website errors.
-    The code must respect the good practices
-    It is recommended that the code should present a test file.
-
-
-Only the standard Go packages are allowed.
-
 ### Run locally
 - Clone the project
 - Go to the project directory
